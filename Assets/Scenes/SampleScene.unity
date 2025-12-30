@@ -179,7 +179,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1483363249}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.089266025, y: -0.4340069}
@@ -288,7 +288,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -378,7 +378,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5746129491179292078, guid: ae185e01865996944b7606d15a71d283, type: 3}
+  m_Sprite: {fileID: -2123852516960040146, guid: 390062a317263e24d82d72b0bf9e18eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -397,8 +397,8 @@ Transform:
   m_GameObject: {fileID: 38003525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1, y: 12, z: 0}
-  m_LocalScale: {x: 0.7451381, y: 0.672, z: 1}
+  m_LocalPosition: {x: -3.66, y: 5.95, z: 0}
+  m_LocalScale: {x: 2.8321183, y: 2.8321183, z: 2.8321183}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -572,7 +572,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -809,7 +809,6 @@ GameObject:
   - component: {fileID: 72345383}
   - component: {fileID: 72345382}
   - component: {fileID: 72345385}
-  - component: {fileID: 72345386}
   - component: {fileID: 72345387}
   m_Layer: 6
   m_Name: Square (4)
@@ -895,7 +894,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -965,21 +964,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &72345386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72345381}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe4d2001b218cd43a15d83da5420b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImplulseDR
-  joint: {fileID: 0}
-  currentStrength: 0
-  damageMultiplier: 1
 --- !u!255 &72345387
 FixedJoint2D:
   m_ObjectHideFlags: 0
@@ -1015,6 +999,7 @@ GameObject:
   - component: {fileID: 95603301}
   - component: {fileID: 95603295}
   - component: {fileID: 95603302}
+  - component: {fileID: 95603303}
   - component: {fileID: 95603294}
   m_Layer: 7
   m_Name: Square (18)
@@ -1203,7 +1188,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1239,8 +1224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e02a1ff29aa2894eabe62bf000928c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::p2
-  motorSpeed: 150
-  motorTorque: 1000
+  targetVelocity: 300
+  motorTorque: 800
 --- !u!114 &95603302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1255,6 +1240,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LeverLoseDetection
   playerName: Player 2
   gameOverUI: {fileID: 1258770766}
+--- !u!114 &95603303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95603292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4329efc815905cb42bb3b0b931fa026b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChainResetter
+  chainBodies:
+  - {fileID: 447589562}
+  - {fileID: 1245162773}
+  - {fileID: 1607987214}
+  - {fileID: 2131480766}
+  - {fileID: 275506235}
+  - {fileID: 1819226961}
+  - {fileID: 40125187}
+  - {fileID: 1510388004}
+  - {fileID: 212732614}
+  - {fileID: 604593564}
+  - {fileID: 1646740403}
+  - {fileID: 765422632}
+  - {fileID: 1378833428}
+  - {fileID: 620511896}
+  - {fileID: 802952556}
+  - {fileID: 1202134285}
+  - {fileID: 806934445}
+  - {fileID: 257984895}
+  - {fileID: 814416657}
+  - {fileID: 713205930}
+  - {fileID: 2131407062}
+  resetDelay: 3
+  maxAllowedDistance: 1
 --- !u!1 &212732613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1445,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1617,7 +1638,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1810,7 +1831,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1847,6 +1868,7 @@ GameObject:
   - component: {fileID: 363169555}
   - component: {fileID: 363169554}
   - component: {fileID: 363169553}
+  - component: {fileID: 363169558}
   m_Layer: 6
   m_Name: Triangle
   m_TagString: Untagged
@@ -2000,7 +2022,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2024,6 +2046,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 4.67, y: 0, z: -180.923}
+--- !u!114 &363169558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363169552}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4329efc815905cb42bb3b0b931fa026b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChainResetter
+  chainBodies:
+  - {fileID: 1737755673}
+  - {fileID: 1166274071}
+  - {fileID: 1769167770}
+  - {fileID: 592942477}
+  - {fileID: 627241760}
+  - {fileID: 1273378514}
+  - {fileID: 755825756}
+  - {fileID: 1731998207}
+  - {fileID: 509482629}
+  - {fileID: 1511494521}
+  - {fileID: 1164047226}
+  - {fileID: 1667456801}
+  - {fileID: 1731497622}
+  - {fileID: 482324152}
+  - {fileID: 1202095692}
+  - {fileID: 1483363249}
+  - {fileID: 7300071}
+  - {fileID: 1926570749}
+  - {fileID: 1579026635}
+  - {fileID: 1039226045}
+  resetDelay: 5
+  maxAllowedDistance: 2
 --- !u!1 &447589559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2190,7 +2247,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2274,7 +2331,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1731497622}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.08783122, y: -0.40568638}
@@ -2383,7 +2440,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2467,7 +2524,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1731998207}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.09152087, y: -0.47851345}
@@ -2576,7 +2633,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2614,7 +2671,6 @@ GameObject:
   - component: {fileID: 514653431}
   - component: {fileID: 514653430}
   - component: {fileID: 514653437}
-  - component: {fileID: 514653436}
   - component: {fileID: 514653438}
   m_Layer: 0
   m_Name: Square (3)
@@ -2700,7 +2756,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.36163503, b: 0.36163503, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2789,21 +2845,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &514653436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514653426}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe4d2001b218cd43a15d83da5420b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImplulseDR
-  joint: {fileID: 0}
-  currentStrength: 200
-  damageMultiplier: 1
 --- !u!114 &514653437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2931,7 +2972,6 @@ GameObject:
   - component: {fileID: 544285177}
   - component: {fileID: 544285176}
   - component: {fileID: 544285175}
-  - component: {fileID: 544285174}
   - component: {fileID: 544285180}
   m_Layer: 0
   m_Name: Square (14)
@@ -2986,21 +3026,6 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0.14370617, y: 0.41342255}
   m_DampingRatio: 0
   m_Frequency: 3
---- !u!114 &544285174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544285171}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe4d2001b218cd43a15d83da5420b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImplulseDR
-  joint: {fileID: 0}
-  currentStrength: 30
-  damageMultiplier: 1
 --- !u!114 &544285175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3124,7 +3149,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3305,7 +3330,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1769167770}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: -0.0030611993, y: -0.45864573}
@@ -3414,7 +3439,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3607,7 +3632,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3643,7 +3668,6 @@ GameObject:
   - component: {fileID: 605912180}
   - component: {fileID: 605912176}
   - component: {fileID: 605912179}
-  - component: {fileID: 605912178}
   - component: {fileID: 605912177}
   m_Layer: 7
   m_Name: Square (17)
@@ -3698,21 +3722,6 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: -0.57315946, y: 0.4472843}
   m_DampingRatio: 0
   m_Frequency: 0
---- !u!114 &605912178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605912175}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe4d2001b218cd43a15d83da5420b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImplulseDR
-  joint: {fileID: 0}
-  currentStrength: 0
-  damageMultiplier: 1
 --- !u!61 &605912179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3809,7 +3818,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4002,7 +4011,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4086,7 +4095,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 592942477}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.028075403, y: -0.43829003}
@@ -4195,7 +4204,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4405,7 +4414,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4626,7 +4635,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1273378514}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.026406739, y: -0.43425187}
@@ -4735,7 +4744,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4928,7 +4937,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5121,7 +5130,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5314,7 +5323,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5527,7 +5536,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5565,7 +5574,6 @@ GameObject:
   - component: {fileID: 855829994}
   - component: {fileID: 855829990}
   - component: {fileID: 855829993}
-  - component: {fileID: 855829992}
   - component: {fileID: 855829997}
   m_Layer: 0
   m_Name: Square (15)
@@ -5605,7 +5613,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 40
+  m_Mass: 50
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -5620,21 +5628,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &855829992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855829989}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe4d2001b218cd43a15d83da5420b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImplulseDR
-  joint: {fileID: 0}
-  currentStrength: 300
-  damageMultiplier: 1
 --- !u!114 &855829993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5745,7 +5738,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5929,8 +5922,8 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.47, y: 0.08}
-  m_ConnectedAnchor: {x: -0.092501774, y: -0.50982714}
+  m_Anchor: {x: 0.60441995, y: -0.02121248}
+  m_ConnectedAnchor: {x: -0.00000053395524, y: -0.5000005}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!58 &886141114
@@ -6046,7 +6039,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6089,7 +6082,7 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0.0000011396446, y: -0.5000001}
   m_AutoConfigureDistance: 1
   m_Distance: 0.20437853
-  m_MaxDistanceOnly: 0
+  m_MaxDistanceOnly: 1
 --- !u!1 &982929884
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,8 +6119,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 37.5, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 15.1007, y: 0}
+  m_SizeDelta: {x: 44.7986, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982929886
 MonoBehaviour:
@@ -6180,7 +6173,6 @@ GameObject:
   - component: {fileID: 1039226045}
   - component: {fileID: 1039226048}
   - component: {fileID: 1039226049}
-  - component: {fileID: 1039226050}
   - component: {fileID: 1039226051}
   m_Layer: 8
   m_Name: Circle (2)
@@ -6201,7 +6193,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -6266,7 +6258,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6340,20 +6332,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
   damageMultiplier: 0.05
   minImpulse: 2
---- !u!114 &1039226050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039226044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d68c80609f5cb844a4a8daebfb2d319, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImpulseDD
-  damageMultiplier: 1
-  minImpactVelocity: 1
 --- !u!232 &1039226051
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -6388,7 +6366,6 @@ GameObject:
   - component: {fileID: 1143650174}
   - component: {fileID: 1143650173}
   - component: {fileID: 1143650172}
-  - component: {fileID: 1143650171}
   - component: {fileID: 1143650177}
   m_Layer: 0
   m_Name: Square (16)
@@ -6424,21 +6401,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1143650171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143650169}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe4d2001b218cd43a15d83da5420b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImplulseDR
-  joint: {fileID: 0}
-  currentStrength: 200
-  damageMultiplier: 1
 --- !u!114 &1143650172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6568,7 +6530,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6746,7 +6708,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1511494521}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.02971518, y: -0.4706563}
@@ -6855,7 +6817,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6912,7 +6874,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1737755673}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: -0.001831366, y: -0.48292047}
@@ -7048,7 +7010,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7132,7 +7094,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 482324152}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.08783102, y: -0.40568253}
@@ -7241,7 +7203,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7434,7 +7396,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7719,7 +7681,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7750,7 +7712,7 @@ DistanceJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245162772}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 2131407062}
@@ -8015,7 +7977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.4, y: -73.2}
+  m_AnchoredPosition: {x: -5, y: -73.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265298631
@@ -8172,7 +8134,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 627241760}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: -0.0024463814, y: -0.47078115}
@@ -8281,7 +8243,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8474,7 +8436,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8558,7 +8520,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1202095692}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.083116464, y: -0.31262562}
@@ -8667,7 +8629,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8860,7 +8822,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8944,7 +8906,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 509482629}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.09152077, y: -0.4785115}
@@ -9053,7 +9015,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9394,7 +9356,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9437,7 +9399,7 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0.0000002769533, y: -0.49999988}
   m_AutoConfigureDistance: 1
   m_Distance: 0.20430605
-  m_MaxDistanceOnly: 0
+  m_MaxDistanceOnly: 1
 --- !u!1 &1579026631
 GameObject:
   m_ObjectHideFlags: 0
@@ -9624,7 +9586,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9817,7 +9779,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9856,7 +9818,6 @@ GameObject:
   - component: {fileID: 1636885438}
   - component: {fileID: 1636885441}
   - component: {fileID: 1636885443}
-  - component: {fileID: 1636885442}
   - component: {fileID: 1636885444}
   m_Layer: 0
   m_Name: Square (1)
@@ -9961,7 +9922,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10045,21 +10006,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageReciever
   maxHealth: 50
   breakAudio: {fileID: 1636885444}
---- !u!114 &1636885442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636885433}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe4d2001b218cd43a15d83da5420b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImplulseDR
-  joint: {fileID: 0}
-  currentStrength: 30
-  damageMultiplier: 1
 --- !u!114 &1636885443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10339,7 +10285,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10396,7 +10342,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1164047226}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.09152087, y: -0.47851345}
@@ -10532,7 +10478,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10571,7 +10517,6 @@ GameObject:
   - component: {fileID: 1695639081}
   - component: {fileID: 1695639086}
   - component: {fileID: 1695639084}
-  - component: {fileID: 1695639085}
   - component: {fileID: 1695639087}
   m_Layer: 0
   m_Name: Square (2)
@@ -10592,7 +10537,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 40
+  m_Mass: 50
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -10657,7 +10602,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10760,21 +10705,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageReciever
   maxHealth: 20
   breakAudio: {fileID: 1695639087}
---- !u!114 &1695639085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695639077}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe4d2001b218cd43a15d83da5420b2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImplulseDR
-  joint: {fileID: 0}
-  currentStrength: 300
-  damageMultiplier: 1
 --- !u!114 &1695639086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10945,7 +10875,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1667456801}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.094800666, y: -0.54325086}
@@ -11054,7 +10984,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11138,7 +11068,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 755825756}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.091930814, y: -0.48660505}
@@ -11247,7 +11177,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11305,7 +11235,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 363169555}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.000010197951, y: 0.5}
   m_ConnectedAnchor: {x: -0.027287755, y: 0.66119426}
@@ -11441,7 +11371,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11472,7 +11402,7 @@ DistanceJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737755670}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 1039226045}
@@ -11545,7 +11475,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 1166274071}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.02930543, y: -0.4625686}
@@ -11654,7 +11584,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11847,7 +11777,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11887,6 +11817,7 @@ GameObject:
   - component: {fileID: 1841935896}
   - component: {fileID: 1841935894}
   - component: {fileID: 1841935897}
+  - component: {fileID: 1841935898}
   - component: {fileID: 1841935895}
   m_Layer: 6
   m_Name: Square (5)
@@ -12018,7 +11949,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12111,8 +12042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3244d761eef4ca945a85652ec7796ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  motorSpeed: 150
-  motorTorque: 1000
+  targetVelocity: 300
+  motorTorque: 800
 --- !u!114 &1841935897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12127,6 +12058,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LeverLoseDetection
   playerName: Player 1
   gameOverUI: {fileID: 1258770766}
+--- !u!114 &1841935898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841935888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4329efc815905cb42bb3b0b931fa026b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChainResetter
+  chainBodies:
+  - {fileID: 363169555}
+  - {fileID: 1737755673}
+  - {fileID: 1166274071}
+  - {fileID: 1769167770}
+  - {fileID: 592942477}
+  - {fileID: 627241760}
+  - {fileID: 1273378514}
+  - {fileID: 755825756}
+  - {fileID: 1731998207}
+  - {fileID: 509482629}
+  - {fileID: 1511494521}
+  - {fileID: 1164047226}
+  - {fileID: 1667456801}
+  - {fileID: 1731497622}
+  - {fileID: 482324152}
+  - {fileID: 1202095692}
+  - {fileID: 1483363249}
+  - {fileID: 7300071}
+  - {fileID: 1926570749}
+  - {fileID: 1579026635}
+  - {fileID: 1039226045}
+  resetDelay: 3
+  maxAllowedDistance: 1
 --- !u!1 &1926570746
 GameObject:
   m_ObjectHideFlags: 0
@@ -12161,7 +12128,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 7300071}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.039251607, y: 0.5532368}
   m_ConnectedAnchor: {x: 0.08865102, y: -0.42186764}
@@ -12297,7 +12264,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0.3647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12340,52 +12307,6 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0.049993966, y: -0.65000004}
   m_DampingRatio: 0
   m_Frequency: 0
---- !u!1 &1975661308
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1975661310}
-  - component: {fileID: 1975661309}
-  m_Layer: 0
-  m_Name: ImpulseDD
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1975661309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975661308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d68c80609f5cb844a4a8daebfb2d319, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImpulseDD
-  damageMultiplier: 1
-  minImpactVelocity: 1
---- !u!4 &1975661310
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975661308}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2458165, y: -1.9950614, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2131407058
 GameObject:
   m_ObjectHideFlags: 0
@@ -12399,29 +12320,14 @@ GameObject:
   - component: {fileID: 2131407062}
   - component: {fileID: 2131407061}
   - component: {fileID: 2131407060}
-  - component: {fileID: 2131407059}
   - component: {fileID: 2131407065}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Circle (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2131407059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131407058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d68c80609f5cb844a4a8daebfb2d319, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ImpulseDD
-  damageMultiplier: 1
-  minImpactVelocity: 1
 --- !u!114 &2131407060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12484,7 +12390,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -12549,7 +12455,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12762,7 +12668,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12890,7 +12796,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -58.522095, y: 0, z: 0, w: -33.05832}
+  m_margin: {x: -10.296539, y: 0, z: 38.4657, w: -33.05832}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12920,8 +12826,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.2, y: 0}
-  m_SizeDelta: {x: 258.2922, y: 50}
+  m_AnchoredPosition: {x: 132.9, y: 22.3}
+  m_SizeDelta: {x: 566.01, y: 171.5841}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -12986,5 +12892,4 @@ SceneRoots:
   - {fileID: 886141117}
   - {fileID: 1039226047}
   - {fileID: 2131407064}
-  - {fileID: 1975661310}
   - {fileID: 538292754}

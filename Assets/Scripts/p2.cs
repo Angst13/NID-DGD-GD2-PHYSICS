@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class p2 : MonoBehaviour
 {
-    private HingeJoint2D hinge;
-    private JointMotor2D motor;
+    HingeJoint2D hinge;
+    JointMotor2D motor;
 
-    public float motorSpeed = 150f;
-    public float motorTorque = 1000f;
+    [Header("Angular Velocity Control")]
+    public float targetVelocity = 30f;   // degrees per second
+    public float motorTorque = 80f;      // strength to reach velocity
 
     void Awake()
     {
@@ -16,27 +17,24 @@ public class p2 : MonoBehaviour
 
     void FixedUpdate()
     {
-        bool forward = Input.GetKey(KeyCode.J); // forward push
-        bool backward = Input.GetKey(KeyCode.L); // backward push
+        float velocity = 0f;
 
-        if (forward && !backward)
+        if (Input.GetKey(KeyCode.J))
+            velocity = targetVelocity;
+        else if (Input.GetKey(KeyCode.L))
+            velocity = -targetVelocity;
+
+        if (Mathf.Abs(velocity) > 0f)
         {
             hinge.useMotor = true;
-            motor.motorSpeed = motorSpeed;
-        }
-        else if (backward && !forward)
-        {
-            hinge.useMotor = true;
-            motor.motorSpeed = -motorSpeed;
+            motor.motorSpeed = velocity;      // 🎯 THIS IS VELOCITY
+            motor.maxMotorTorque = motorTorque;
+            hinge.motor = motor;
         }
         else
         {
-            // RELEASE — let physics take over
+            // Release — let physics take over
             hinge.useMotor = false;
-            return;
         }
-
-        motor.maxMotorTorque = motorTorque;
-        hinge.motor = motor;
     }
 }
