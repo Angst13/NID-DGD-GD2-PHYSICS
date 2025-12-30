@@ -19,9 +19,9 @@ public class p2 : MonoBehaviour
     {
         float velocity = 0f;
 
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.LeftArrow))
             velocity = targetVelocity;
-        else if (Input.GetKey(KeyCode.L))
+        else if (Input.GetKey(KeyCode.RightArrow))
             velocity = -targetVelocity;
 
         if (Mathf.Abs(velocity) > 0f)
