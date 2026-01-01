@@ -27,7 +27,7 @@ public class p2 : MonoBehaviour
         if (Mathf.Abs(velocity) > 0f)
         {
             hinge.useMotor = true;
-            motor.motorSpeed = velocity;      // 🎯 THIS IS VELOCITY
+            motor.motorSpeed = velocity;      // THIS IS VELOCITY
             motor.maxMotorTorque = motorTorque;
             hinge.motor = motor;
         }
