@@ -7,15 +7,21 @@ public class DamageReciever : MonoBehaviour
     float currentHealth;
     bool broken = false;
 
-    public AudioSource breakAudio; // 🔊 break sound
+    public AudioSource breakAudio;
+
+    [Header("Damage Indicator")]
+    public Transform damageIndicator;   // red child square
+    float originalIndicatorHeight;
 
     void Awake()
     {
         currentHealth = maxHealth;
 
-        // Auto-find AudioSource if not assigned
         if (breakAudio == null)
             breakAudio = GetComponent<AudioSource>();
+
+        if (damageIndicator != null)
+            originalIndicatorHeight = damageIndicator.localScale.y;
     }
 
     public void ApplyDamage(float damage)
@@ -23,7 +29,9 @@ public class DamageReciever : MonoBehaviour
         if (broken) return;
 
         currentHealth -= damage;
-        Debug.Log($"{gameObject.name} HP: {currentHealth}");
+        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
+
+        UpdateDamageIndicator();
 
         if (currentHealth <= 0f)
         {
@@ -32,25 +40,28 @@ public class DamageReciever : MonoBehaviour
         }
     }
 
+    void UpdateDamageIndicator()
+    {
+        if (damageIndicator == null) return;
+
+        float healthPercent = currentHealth / maxHealth;
+
+        Vector3 scale = damageIndicator.localScale;
+        scale.y = originalIndicatorHeight * healthPercent;
+        damageIndicator.localScale = scale;
+    }
+
     IEnumerator BreakAllJoints()
     {
-        // wait until physics step ends
         yield return new WaitForFixedUpdate();
 
-        // 🔊 PLAY BREAK SOUND
         if (breakAudio != null)
-        {
             breakAudio.Play();
-        }
 
-        // break all joints
         FixedJoint2D[] joints = GetComponents<FixedJoint2D>();
         foreach (var j in joints)
-        {
             Destroy(j);
-        }
 
-        // reduce explosive forces
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {

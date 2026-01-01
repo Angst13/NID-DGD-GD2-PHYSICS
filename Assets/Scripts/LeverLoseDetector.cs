@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class LeverLoseDetector : MonoBehaviour
 {
-    public string playerName;        // <-- MUST be public
-    public GameOverUI gameOverUI;    // <-- MUST be public
+    public string playerName;
+    public GameOverUI gameOverUI;
+
+    [Header("Upper Chain Detection")]
+    public Collider2D[] upperChainColliders; // assign in Inspector
 
     bool lost = false;
     float startTime;
@@ -18,15 +21,26 @@ public class LeverLoseDetector : MonoBehaviour
         if (lost) return;
         if (Time.time - startTime < 1f) return;
 
+        // Lever hits ground
         if (collision.collider.CompareTag("ground"))
         {
-            lost = true;
-            DeclareLoss();
+            TriggerLoss();
         }
     }
 
-    void DeclareLoss()
+    // This is called by chain parts
+    public void UpperChainHitGround()
     {
+        if (lost) return;
+        if (Time.time - startTime < 1f) return;
+
+        TriggerLoss();
+    }
+
+    void TriggerLoss()
+    {
+        lost = true;
+
         string winner =
             playerName == "Player 1" ? "Player 2" : "Player 1";
 
