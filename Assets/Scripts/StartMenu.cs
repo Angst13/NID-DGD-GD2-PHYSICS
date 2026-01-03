@@ -16,7 +16,7 @@ public class StartMenu : MonoBehaviour
 
         Application.Quit();
 
-        // This only works in build, not in Editor
+        //  works in build, not in Editor
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif

@@ -3523,7 +3523,6 @@ GameObject:
   - component: {fileID: 514653430}
   - component: {fileID: 514653437}
   - component: {fileID: 514653438}
-  - component: {fileID: 514653440}
   - component: {fileID: 514653439}
   m_Layer: 0
   m_Name: Square (3)
@@ -3838,22 +3837,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &514653440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514653426}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b240f768cb5da474d926beed571cefc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damagerecieverv2
-  maxHealth: 10
-  playerName: 
-  gameOverUI: {fileID: 0}
-  healthBar: {fileID: 0}
 --- !u!1 &521034501
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,7 +4022,6 @@ GameObject:
   - component: {fileID: 544285177}
   - component: {fileID: 544285176}
   - component: {fileID: 544285175}
-  - component: {fileID: 544285181}
   - component: {fileID: 544285180}
   m_Layer: 0
   m_Name: Square (14)
@@ -4344,22 +4326,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &544285181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544285171}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b240f768cb5da474d926beed571cefc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damagerecieverv2
-  maxHealth: 100
-  playerName: 
-  gameOverUI: {fileID: 0}
-  healthBar: {fileID: 0}
 --- !u!1 &592942476
 GameObject:
   m_ObjectHideFlags: 0
@@ -7046,7 +7012,6 @@ GameObject:
   - component: {fileID: 855829994}
   - component: {fileID: 855829990}
   - component: {fileID: 855829993}
-  - component: {fileID: 855829998}
   - component: {fileID: 855829997}
   m_Layer: 0
   m_Name: Square (15)
@@ -7338,22 +7303,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &855829998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855829989}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b240f768cb5da474d926beed571cefc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damagerecieverv2
-  maxHealth: 40
-  playerName: 
-  gameOverUI: {fileID: 1258770766}
-  healthBar: {fileID: 0}
 --- !u!1 &871862708
 GameObject:
   m_ObjectHideFlags: 0
@@ -8055,7 +8004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15.02002, y: 0}
+  m_AnchoredPosition: {x: 15.02002, y: 0.070007324}
   m_SizeDelta: {x: 44.7986, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982929886
@@ -8314,7 +8263,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 4
+  m_Mass: 2
   m_LinearDamping: 0.05
   m_AngularDamping: 10
   m_GravityScale: 1
@@ -9065,7 +9014,6 @@ GameObject:
   - component: {fileID: 1143650173}
   - component: {fileID: 1143650172}
   - component: {fileID: 1143650177}
-  - component: {fileID: 1143650179}
   - component: {fileID: 1143650178}
   m_Layer: 0
   m_Name: Square (16)
@@ -9380,22 +9328,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1143650179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143650169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b240f768cb5da474d926beed571cefc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damagerecieverv2
-  maxHealth: 10
-  playerName: 
-  gameOverUI: {fileID: 0}
-  healthBar: {fileID: 0}
 --- !u!1 &1149935404
 GameObject:
   m_ObjectHideFlags: 0
@@ -10771,7 +10703,6 @@ GameObject:
   - component: {fileID: 1258770768}
   - component: {fileID: 1258770767}
   - component: {fileID: 1258770766}
-  - component: {fileID: 1258770772}
   - component: {fileID: 1258770771}
   m_Layer: 5
   m_Name: Canvas
@@ -10976,22 +10907,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1258770772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258770765}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b240f768cb5da474d926beed571cefc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damagerecieverv2
-  maxHealth: 100
-  playerName: 
-  gameOverUI: {fileID: 0}
-  healthBar: {fileID: 0}
 --- !u!1 &1265298629
 GameObject:
   m_ObjectHideFlags: 0
@@ -13462,7 +13377,6 @@ GameObject:
   - component: {fileID: 1636885438}
   - component: {fileID: 1636885441}
   - component: {fileID: 1636885443}
-  - component: {fileID: 1636885446}
   - component: {fileID: 1636885444}
   - component: {fileID: 1636885445}
   m_Layer: 0
@@ -13781,22 +13695,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StopMusicOnJointBreak
   backgroundMusic: {fileID: 2012964947}
---- !u!114 &1636885446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636885433}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b240f768cb5da474d926beed571cefc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damagerecieverv2
-  maxHealth: 100
-  playerName: 
-  gameOverUI: {fileID: 0}
-  healthBar: {fileID: 0}
 --- !u!1 &1646740402
 GameObject:
   m_ObjectHideFlags: 0
@@ -14198,7 +14096,6 @@ GameObject:
   - component: {fileID: 1695639081}
   - component: {fileID: 1695639086}
   - component: {fileID: 1695639084}
-  - component: {fileID: 1695639088}
   - component: {fileID: 1695639087}
   m_Layer: 0
   m_Name: Square (2)
@@ -14219,7 +14116,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 40
+  m_Mass: 50
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -14504,22 +14401,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1695639088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695639077}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b240f768cb5da474d926beed571cefc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damagerecieverv2
-  maxHealth: 40
-  playerName: 
-  gameOverUI: {fileID: 0}
-  healthBar: {fileID: 0}
 --- !u!1 &1722497341
 GameObject:
   m_ObjectHideFlags: 0
@@ -17426,7 +17307,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 4
+  m_Mass: 2
   m_LinearDamping: 0.05
   m_AngularDamping: 10
   m_GravityScale: 1
